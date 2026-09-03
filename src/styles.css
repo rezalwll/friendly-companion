@@ -4,6 +4,27 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "IranYekan";
+  src: url("/__l5e/assets-v1/c8cdf295-9647-4f65-9943-82df3e8193da/iranyekan.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-fa: "IranYekan", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "IranYekan", sans-serif;
+  --font-sans: "Sora", "IranYekan", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-navy-950: oklch(0.19 0.075 262);
+  --color-navy-900: oklch(0.24 0.09 262);
+  --color-navy-800: oklch(0.31 0.115 261);
+  --color-royal-600: oklch(0.44 0.17 262);
+  --color-cyan-400: oklch(0.79 0.14 220);
+  --color-cyan-300: oklch(0.86 0.11 216);
+}
+
+
 /*
  * Design system definition.
  *
