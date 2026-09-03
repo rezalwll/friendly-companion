@@ -10,7 +10,7 @@ export default function DirectionA({ p }: { p: Palette }) {
       {/* Desktop navbar */}
       <header className="hidden md:flex items-center justify-between px-10 py-5" style={{ borderBottom: `1px solid ${p.border}` }}>
         <div className="flex items-center gap-3">
-          <img src={logo.url} alt="RYCODE" className="h-8 w-8 object-contain mix-blend-multiply dark:mix-blend-normal" />
+          <img src={logo.url} alt="RYCODE" className="h-8 w-8 object-contain" />
           <span className="text-lg font-bold tracking-tight">RYCODE</span>
         </div>
         <nav className="flex items-center gap-8 text-sm" style={{ color: p.muted }}>
