@@ -10,11 +10,59 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangRouteImport } from './routes/$lang'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as DesignLabRouteImport } from './routes/design-lab'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangAboutRouteImport } from './routes/$lang.about'
+import { Route as LangAuthRouteImport } from './routes/$lang.auth'
+import { Route as LangCareersRouteImport } from './routes/$lang.careers'
+import { Route as LangContactRouteImport } from './routes/$lang.contact'
+import { Route as LangCookiesRouteImport } from './routes/$lang.cookies'
+import { Route as LangFaqRouteImport } from './routes/$lang.faq'
+import { Route as LangInstallmentsRouteImport } from './routes/$lang.installments'
+import { Route as LangPricingRouteImport } from './routes/$lang.pricing'
+import { Route as LangPrivacyRouteImport } from './routes/$lang.privacy'
+import { Route as LangProcessRouteImport } from './routes/$lang.process'
+import { Route as LangRequestRouteImport } from './routes/$lang.request'
+import { Route as LangSearchRouteImport } from './routes/$lang.search'
+import { Route as LangTechnologiesRouteImport } from './routes/$lang.technologies'
+import { Route as LangTermsRouteImport } from './routes/$lang.terms'
+import { Route as LangWhyRouteImport } from './routes/$lang.why'
+import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
+import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as LangBlogIndexRouteImport } from './routes/$lang.blog.index'
+import { Route as LangBlogSlugRouteImport } from './routes/$lang.blog.$slug'
+import { Route as LangPortfolioIndexRouteImport } from './routes/$lang.portfolio.index'
+import { Route as LangPortfolioSlugRouteImport } from './routes/$lang.portfolio.$slug'
+import { Route as LangServicesIndexRouteImport } from './routes/$lang.services.index'
+import { Route as LangServicesSlugRouteImport } from './routes/$lang.services.$slug'
+import { Route as AuthenticatedAdminIndexRouteImport } from './routes/_authenticated/admin.index'
+import { Route as AuthenticatedAdminMessagesRouteImport } from './routes/_authenticated/admin.messages'
+import { Route as AuthenticatedAdminOrdersRouteImport } from './routes/_authenticated/admin.orders'
+import { Route as AuthenticatedAdminRequestsRouteImport } from './routes/_authenticated/admin.requests'
+import { Route as AuthenticatedAdminTicketsRouteImport } from './routes/_authenticated/admin.tickets'
+import { Route as AuthenticatedDashboardIndexRouteImport } from './routes/_authenticated/dashboard.index'
+import { Route as AuthenticatedDashboardInstallmentsRouteImport } from './routes/_authenticated/dashboard.installments'
+import { Route as AuthenticatedDashboardProfileRouteImport } from './routes/_authenticated/dashboard.profile'
+import { Route as AuthenticatedDashboardProjectsRouteImport } from './routes/_authenticated/dashboard.projects'
+import { Route as AuthenticatedDashboardRequestsRouteImport } from './routes/_authenticated/dashboard.requests'
+import { Route as AuthenticatedDashboardTicketsRouteImport } from './routes/_authenticated/dashboard.tickets'
+import { Route as LangBlogCategorySlugRouteImport } from './routes/$lang.blog.category.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangRoute = LangRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DesignLabRoute = DesignLabRouteImport.update({
@@ -22,31 +70,460 @@ const DesignLabRoute = DesignLabRouteImport.update({
   path: '/design-lab',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAboutRoute = LangAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangAuthRoute = LangAuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCareersRoute = LangCareersRouteImport.update({
+  id: '/careers',
+  path: '/careers',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangContactRoute = LangContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangCookiesRoute = LangCookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangFaqRoute = LangFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangInstallmentsRoute = LangInstallmentsRouteImport.update({
+  id: '/installments',
+  path: '/installments',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangPricingRoute = LangPricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangPrivacyRoute = LangPrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangProcessRoute = LangProcessRouteImport.update({
+  id: '/process',
+  path: '/process',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangRequestRoute = LangRequestRouteImport.update({
+  id: '/request',
+  path: '/request',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangSearchRoute = LangSearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangTechnologiesRoute = LangTechnologiesRouteImport.update({
+  id: '/technologies',
+  path: '/technologies',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangTermsRoute = LangTermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangWhyRoute = LangWhyRouteImport.update({
+  id: '/why',
+  path: '/why',
+  getParentRoute: () => LangRoute,
+} as any)
+const AuthenticatedAdminRoute = AuthenticatedAdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const LangBlogIndexRoute = LangBlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangBlogSlugRoute = LangBlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangPortfolioIndexRoute = LangPortfolioIndexRouteImport.update({
+  id: '/portfolio/',
+  path: '/portfolio/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangPortfolioSlugRoute = LangPortfolioSlugRouteImport.update({
+  id: '/portfolio/$slug',
+  path: '/portfolio/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangServicesIndexRoute = LangServicesIndexRouteImport.update({
+  id: '/services/',
+  path: '/services/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangServicesSlugRoute = LangServicesSlugRouteImport.update({
+  id: '/services/$slug',
+  path: '/services/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
+const AuthenticatedAdminIndexRoute = AuthenticatedAdminIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthenticatedAdminRoute,
+} as any)
+const AuthenticatedAdminMessagesRoute =
+  AuthenticatedAdminMessagesRouteImport.update({
+    id: '/messages',
+    path: '/messages',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
+const AuthenticatedAdminOrdersRoute =
+  AuthenticatedAdminOrdersRouteImport.update({
+    id: '/orders',
+    path: '/orders',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
+const AuthenticatedAdminRequestsRoute =
+  AuthenticatedAdminRequestsRouteImport.update({
+    id: '/requests',
+    path: '/requests',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
+const AuthenticatedAdminTicketsRoute =
+  AuthenticatedAdminTicketsRouteImport.update({
+    id: '/tickets',
+    path: '/tickets',
+    getParentRoute: () => AuthenticatedAdminRoute,
+  } as any)
+const AuthenticatedDashboardIndexRoute =
+  AuthenticatedDashboardIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedDashboardRoute,
+  } as any)
+const AuthenticatedDashboardInstallmentsRoute =
+  AuthenticatedDashboardInstallmentsRouteImport.update({
+    id: '/installments',
+    path: '/installments',
+    getParentRoute: () => AuthenticatedDashboardRoute,
+  } as any)
+const AuthenticatedDashboardProfileRoute =
+  AuthenticatedDashboardProfileRouteImport.update({
+    id: '/profile',
+    path: '/profile',
+    getParentRoute: () => AuthenticatedDashboardRoute,
+  } as any)
+const AuthenticatedDashboardProjectsRoute =
+  AuthenticatedDashboardProjectsRouteImport.update({
+    id: '/projects',
+    path: '/projects',
+    getParentRoute: () => AuthenticatedDashboardRoute,
+  } as any)
+const AuthenticatedDashboardRequestsRoute =
+  AuthenticatedDashboardRequestsRouteImport.update({
+    id: '/requests',
+    path: '/requests',
+    getParentRoute: () => AuthenticatedDashboardRoute,
+  } as any)
+const AuthenticatedDashboardTicketsRoute =
+  AuthenticatedDashboardTicketsRouteImport.update({
+    id: '/tickets',
+    path: '/tickets',
+    getParentRoute: () => AuthenticatedDashboardRoute,
+  } as any)
+const LangBlogCategorySlugRoute = LangBlogCategorySlugRouteImport.update({
+  id: '/blog/category/$slug',
+  path: '/blog/category/$slug',
+  getParentRoute: () => LangRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$lang': typeof LangRouteWithChildren
   '/design-lab': typeof DesignLabRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/auth': typeof LangAuthRoute
+  '/$lang/careers': typeof LangCareersRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/cookies': typeof LangCookiesRoute
+  '/$lang/faq': typeof LangFaqRoute
+  '/$lang/installments': typeof LangInstallmentsRoute
+  '/$lang/pricing': typeof LangPricingRoute
+  '/$lang/privacy': typeof LangPrivacyRoute
+  '/$lang/process': typeof LangProcessRoute
+  '/$lang/request': typeof LangRequestRoute
+  '/$lang/search': typeof LangSearchRoute
+  '/$lang/technologies': typeof LangTechnologiesRoute
+  '/$lang/terms': typeof LangTermsRoute
+  '/$lang/why': typeof LangWhyRoute
+  '/admin': typeof AuthenticatedAdminRouteWithChildren
+  '/dashboard': typeof AuthenticatedDashboardRouteWithChildren
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/blog/$slug': typeof LangBlogSlugRoute
+  '/$lang/portfolio/$slug': typeof LangPortfolioSlugRoute
+  '/$lang/services/$slug': typeof LangServicesSlugRoute
+  '/admin/messages': typeof AuthenticatedAdminMessagesRoute
+  '/admin/orders': typeof AuthenticatedAdminOrdersRoute
+  '/admin/requests': typeof AuthenticatedAdminRequestsRoute
+  '/admin/tickets': typeof AuthenticatedAdminTicketsRoute
+  '/dashboard/installments': typeof AuthenticatedDashboardInstallmentsRoute
+  '/dashboard/profile': typeof AuthenticatedDashboardProfileRoute
+  '/dashboard/projects': typeof AuthenticatedDashboardProjectsRoute
+  '/dashboard/requests': typeof AuthenticatedDashboardRequestsRoute
+  '/dashboard/tickets': typeof AuthenticatedDashboardTicketsRoute
+  '/$lang/blog/': typeof LangBlogIndexRoute
+  '/$lang/portfolio/': typeof LangPortfolioIndexRoute
+  '/$lang/services/': typeof LangServicesIndexRoute
+  '/admin/': typeof AuthenticatedAdminIndexRoute
+  '/dashboard/': typeof AuthenticatedDashboardIndexRoute
+  '/$lang/blog/category/$slug': typeof LangBlogCategorySlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/design-lab': typeof DesignLabRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/auth': typeof LangAuthRoute
+  '/$lang/careers': typeof LangCareersRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/cookies': typeof LangCookiesRoute
+  '/$lang/faq': typeof LangFaqRoute
+  '/$lang/installments': typeof LangInstallmentsRoute
+  '/$lang/pricing': typeof LangPricingRoute
+  '/$lang/privacy': typeof LangPrivacyRoute
+  '/$lang/process': typeof LangProcessRoute
+  '/$lang/request': typeof LangRequestRoute
+  '/$lang/search': typeof LangSearchRoute
+  '/$lang/technologies': typeof LangTechnologiesRoute
+  '/$lang/terms': typeof LangTermsRoute
+  '/$lang/why': typeof LangWhyRoute
+  '/$lang': typeof LangIndexRoute
+  '/$lang/blog/$slug': typeof LangBlogSlugRoute
+  '/$lang/portfolio/$slug': typeof LangPortfolioSlugRoute
+  '/$lang/services/$slug': typeof LangServicesSlugRoute
+  '/admin/messages': typeof AuthenticatedAdminMessagesRoute
+  '/admin/orders': typeof AuthenticatedAdminOrdersRoute
+  '/admin/requests': typeof AuthenticatedAdminRequestsRoute
+  '/admin/tickets': typeof AuthenticatedAdminTicketsRoute
+  '/dashboard/installments': typeof AuthenticatedDashboardInstallmentsRoute
+  '/dashboard/profile': typeof AuthenticatedDashboardProfileRoute
+  '/dashboard/projects': typeof AuthenticatedDashboardProjectsRoute
+  '/dashboard/requests': typeof AuthenticatedDashboardRequestsRoute
+  '/dashboard/tickets': typeof AuthenticatedDashboardTicketsRoute
+  '/$lang/blog': typeof LangBlogIndexRoute
+  '/$lang/portfolio': typeof LangPortfolioIndexRoute
+  '/$lang/services': typeof LangServicesIndexRoute
+  '/admin': typeof AuthenticatedAdminIndexRoute
+  '/dashboard': typeof AuthenticatedDashboardIndexRoute
+  '/$lang/blog/category/$slug': typeof LangBlogCategorySlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/$lang': typeof LangRouteWithChildren
   '/design-lab': typeof DesignLabRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/$lang/about': typeof LangAboutRoute
+  '/$lang/auth': typeof LangAuthRoute
+  '/$lang/careers': typeof LangCareersRoute
+  '/$lang/contact': typeof LangContactRoute
+  '/$lang/cookies': typeof LangCookiesRoute
+  '/$lang/faq': typeof LangFaqRoute
+  '/$lang/installments': typeof LangInstallmentsRoute
+  '/$lang/pricing': typeof LangPricingRoute
+  '/$lang/privacy': typeof LangPrivacyRoute
+  '/$lang/process': typeof LangProcessRoute
+  '/$lang/request': typeof LangRequestRoute
+  '/$lang/search': typeof LangSearchRoute
+  '/$lang/technologies': typeof LangTechnologiesRoute
+  '/$lang/terms': typeof LangTermsRoute
+  '/$lang/why': typeof LangWhyRoute
+  '/_authenticated/admin': typeof AuthenticatedAdminRouteWithChildren
+  '/_authenticated/dashboard': typeof AuthenticatedDashboardRouteWithChildren
+  '/$lang/': typeof LangIndexRoute
+  '/$lang/blog/$slug': typeof LangBlogSlugRoute
+  '/$lang/portfolio/$slug': typeof LangPortfolioSlugRoute
+  '/$lang/services/$slug': typeof LangServicesSlugRoute
+  '/_authenticated/admin/messages': typeof AuthenticatedAdminMessagesRoute
+  '/_authenticated/admin/orders': typeof AuthenticatedAdminOrdersRoute
+  '/_authenticated/admin/requests': typeof AuthenticatedAdminRequestsRoute
+  '/_authenticated/admin/tickets': typeof AuthenticatedAdminTicketsRoute
+  '/_authenticated/dashboard/installments': typeof AuthenticatedDashboardInstallmentsRoute
+  '/_authenticated/dashboard/profile': typeof AuthenticatedDashboardProfileRoute
+  '/_authenticated/dashboard/projects': typeof AuthenticatedDashboardProjectsRoute
+  '/_authenticated/dashboard/requests': typeof AuthenticatedDashboardRequestsRoute
+  '/_authenticated/dashboard/tickets': typeof AuthenticatedDashboardTicketsRoute
+  '/$lang/blog/': typeof LangBlogIndexRoute
+  '/$lang/portfolio/': typeof LangPortfolioIndexRoute
+  '/$lang/services/': typeof LangServicesIndexRoute
+  '/_authenticated/admin/': typeof AuthenticatedAdminIndexRoute
+  '/_authenticated/dashboard/': typeof AuthenticatedDashboardIndexRoute
+  '/$lang/blog/category/$slug': typeof LangBlogCategorySlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/design-lab'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/design-lab'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/auth'
+    | '/$lang/careers'
+    | '/$lang/contact'
+    | '/$lang/cookies'
+    | '/$lang/faq'
+    | '/$lang/installments'
+    | '/$lang/pricing'
+    | '/$lang/privacy'
+    | '/$lang/process'
+    | '/$lang/request'
+    | '/$lang/search'
+    | '/$lang/technologies'
+    | '/$lang/terms'
+    | '/$lang/why'
+    | '/admin'
+    | '/dashboard'
+    | '/$lang/'
+    | '/$lang/blog/$slug'
+    | '/$lang/portfolio/$slug'
+    | '/$lang/services/$slug'
+    | '/admin/messages'
+    | '/admin/orders'
+    | '/admin/requests'
+    | '/admin/tickets'
+    | '/dashboard/installments'
+    | '/dashboard/profile'
+    | '/dashboard/projects'
+    | '/dashboard/requests'
+    | '/dashboard/tickets'
+    | '/$lang/blog/'
+    | '/$lang/portfolio/'
+    | '/$lang/services/'
+    | '/admin/'
+    | '/dashboard/'
+    | '/$lang/blog/category/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/design-lab'
-  id: '__root__' | '/' | '/design-lab'
+  to:
+    | '/'
+    | '/design-lab'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/auth'
+    | '/$lang/careers'
+    | '/$lang/contact'
+    | '/$lang/cookies'
+    | '/$lang/faq'
+    | '/$lang/installments'
+    | '/$lang/pricing'
+    | '/$lang/privacy'
+    | '/$lang/process'
+    | '/$lang/request'
+    | '/$lang/search'
+    | '/$lang/technologies'
+    | '/$lang/terms'
+    | '/$lang/why'
+    | '/$lang'
+    | '/$lang/blog/$slug'
+    | '/$lang/portfolio/$slug'
+    | '/$lang/services/$slug'
+    | '/admin/messages'
+    | '/admin/orders'
+    | '/admin/requests'
+    | '/admin/tickets'
+    | '/dashboard/installments'
+    | '/dashboard/profile'
+    | '/dashboard/projects'
+    | '/dashboard/requests'
+    | '/dashboard/tickets'
+    | '/$lang/blog'
+    | '/$lang/portfolio'
+    | '/$lang/services'
+    | '/admin'
+    | '/dashboard'
+    | '/$lang/blog/category/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/$lang'
+    | '/design-lab'
+    | '/sitemap.xml'
+    | '/$lang/about'
+    | '/$lang/auth'
+    | '/$lang/careers'
+    | '/$lang/contact'
+    | '/$lang/cookies'
+    | '/$lang/faq'
+    | '/$lang/installments'
+    | '/$lang/pricing'
+    | '/$lang/privacy'
+    | '/$lang/process'
+    | '/$lang/request'
+    | '/$lang/search'
+    | '/$lang/technologies'
+    | '/$lang/terms'
+    | '/$lang/why'
+    | '/_authenticated/admin'
+    | '/_authenticated/dashboard'
+    | '/$lang/'
+    | '/$lang/blog/$slug'
+    | '/$lang/portfolio/$slug'
+    | '/$lang/services/$slug'
+    | '/_authenticated/admin/messages'
+    | '/_authenticated/admin/orders'
+    | '/_authenticated/admin/requests'
+    | '/_authenticated/admin/tickets'
+    | '/_authenticated/dashboard/installments'
+    | '/_authenticated/dashboard/profile'
+    | '/_authenticated/dashboard/projects'
+    | '/_authenticated/dashboard/requests'
+    | '/_authenticated/dashboard/tickets'
+    | '/$lang/blog/'
+    | '/$lang/portfolio/'
+    | '/$lang/services/'
+    | '/_authenticated/admin/'
+    | '/_authenticated/dashboard/'
+    | '/$lang/blog/category/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  LangRoute: typeof LangRouteWithChildren
   DesignLabRoute: typeof DesignLabRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,6 +535,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/design-lab': {
       id: '/design-lab'
       path: '/design-lab'
@@ -65,12 +556,385 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DesignLabRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/about': {
+      id: '/$lang/about'
+      path: '/about'
+      fullPath: '/$lang/about'
+      preLoaderRoute: typeof LangAboutRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/auth': {
+      id: '/$lang/auth'
+      path: '/auth'
+      fullPath: '/$lang/auth'
+      preLoaderRoute: typeof LangAuthRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/careers': {
+      id: '/$lang/careers'
+      path: '/careers'
+      fullPath: '/$lang/careers'
+      preLoaderRoute: typeof LangCareersRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/contact': {
+      id: '/$lang/contact'
+      path: '/contact'
+      fullPath: '/$lang/contact'
+      preLoaderRoute: typeof LangContactRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/cookies': {
+      id: '/$lang/cookies'
+      path: '/cookies'
+      fullPath: '/$lang/cookies'
+      preLoaderRoute: typeof LangCookiesRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/faq': {
+      id: '/$lang/faq'
+      path: '/faq'
+      fullPath: '/$lang/faq'
+      preLoaderRoute: typeof LangFaqRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/installments': {
+      id: '/$lang/installments'
+      path: '/installments'
+      fullPath: '/$lang/installments'
+      preLoaderRoute: typeof LangInstallmentsRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/pricing': {
+      id: '/$lang/pricing'
+      path: '/pricing'
+      fullPath: '/$lang/pricing'
+      preLoaderRoute: typeof LangPricingRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/privacy': {
+      id: '/$lang/privacy'
+      path: '/privacy'
+      fullPath: '/$lang/privacy'
+      preLoaderRoute: typeof LangPrivacyRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/process': {
+      id: '/$lang/process'
+      path: '/process'
+      fullPath: '/$lang/process'
+      preLoaderRoute: typeof LangProcessRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/request': {
+      id: '/$lang/request'
+      path: '/request'
+      fullPath: '/$lang/request'
+      preLoaderRoute: typeof LangRequestRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/search': {
+      id: '/$lang/search'
+      path: '/search'
+      fullPath: '/$lang/search'
+      preLoaderRoute: typeof LangSearchRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/technologies': {
+      id: '/$lang/technologies'
+      path: '/technologies'
+      fullPath: '/$lang/technologies'
+      preLoaderRoute: typeof LangTechnologiesRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/terms': {
+      id: '/$lang/terms'
+      path: '/terms'
+      fullPath: '/$lang/terms'
+      preLoaderRoute: typeof LangTermsRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/why': {
+      id: '/$lang/why'
+      path: '/why'
+      fullPath: '/$lang/why'
+      preLoaderRoute: typeof LangWhyRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/_authenticated/admin': {
+      id: '/_authenticated/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AuthenticatedAdminRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/dashboard': {
+      id: '/_authenticated/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/$lang/blog/': {
+      id: '/$lang/blog/'
+      path: '/blog'
+      fullPath: '/$lang/blog/'
+      preLoaderRoute: typeof LangBlogIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/blog/$slug': {
+      id: '/$lang/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/$lang/blog/$slug'
+      preLoaderRoute: typeof LangBlogSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/portfolio/': {
+      id: '/$lang/portfolio/'
+      path: '/portfolio'
+      fullPath: '/$lang/portfolio/'
+      preLoaderRoute: typeof LangPortfolioIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/portfolio/$slug': {
+      id: '/$lang/portfolio/$slug'
+      path: '/portfolio/$slug'
+      fullPath: '/$lang/portfolio/$slug'
+      preLoaderRoute: typeof LangPortfolioSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/services/': {
+      id: '/$lang/services/'
+      path: '/services'
+      fullPath: '/$lang/services/'
+      preLoaderRoute: typeof LangServicesIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/services/$slug': {
+      id: '/$lang/services/$slug'
+      path: '/services/$slug'
+      fullPath: '/$lang/services/$slug'
+      preLoaderRoute: typeof LangServicesSlugRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/_authenticated/admin/': {
+      id: '/_authenticated/admin/'
+      path: '/'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AuthenticatedAdminIndexRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
+    '/_authenticated/admin/messages': {
+      id: '/_authenticated/admin/messages'
+      path: '/messages'
+      fullPath: '/admin/messages'
+      preLoaderRoute: typeof AuthenticatedAdminMessagesRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
+    '/_authenticated/admin/orders': {
+      id: '/_authenticated/admin/orders'
+      path: '/orders'
+      fullPath: '/admin/orders'
+      preLoaderRoute: typeof AuthenticatedAdminOrdersRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
+    '/_authenticated/admin/requests': {
+      id: '/_authenticated/admin/requests'
+      path: '/requests'
+      fullPath: '/admin/requests'
+      preLoaderRoute: typeof AuthenticatedAdminRequestsRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
+    '/_authenticated/admin/tickets': {
+      id: '/_authenticated/admin/tickets'
+      path: '/tickets'
+      fullPath: '/admin/tickets'
+      preLoaderRoute: typeof AuthenticatedAdminTicketsRouteImport
+      parentRoute: typeof AuthenticatedAdminRoute
+    }
+    '/_authenticated/dashboard/': {
+      id: '/_authenticated/dashboard/'
+      path: '/'
+      fullPath: '/dashboard/'
+      preLoaderRoute: typeof AuthenticatedDashboardIndexRouteImport
+      parentRoute: typeof AuthenticatedDashboardRoute
+    }
+    '/_authenticated/dashboard/installments': {
+      id: '/_authenticated/dashboard/installments'
+      path: '/installments'
+      fullPath: '/dashboard/installments'
+      preLoaderRoute: typeof AuthenticatedDashboardInstallmentsRouteImport
+      parentRoute: typeof AuthenticatedDashboardRoute
+    }
+    '/_authenticated/dashboard/profile': {
+      id: '/_authenticated/dashboard/profile'
+      path: '/profile'
+      fullPath: '/dashboard/profile'
+      preLoaderRoute: typeof AuthenticatedDashboardProfileRouteImport
+      parentRoute: typeof AuthenticatedDashboardRoute
+    }
+    '/_authenticated/dashboard/projects': {
+      id: '/_authenticated/dashboard/projects'
+      path: '/projects'
+      fullPath: '/dashboard/projects'
+      preLoaderRoute: typeof AuthenticatedDashboardProjectsRouteImport
+      parentRoute: typeof AuthenticatedDashboardRoute
+    }
+    '/_authenticated/dashboard/requests': {
+      id: '/_authenticated/dashboard/requests'
+      path: '/requests'
+      fullPath: '/dashboard/requests'
+      preLoaderRoute: typeof AuthenticatedDashboardRequestsRouteImport
+      parentRoute: typeof AuthenticatedDashboardRoute
+    }
+    '/_authenticated/dashboard/tickets': {
+      id: '/_authenticated/dashboard/tickets'
+      path: '/tickets'
+      fullPath: '/dashboard/tickets'
+      preLoaderRoute: typeof AuthenticatedDashboardTicketsRouteImport
+      parentRoute: typeof AuthenticatedDashboardRoute
+    }
+    '/$lang/blog/category/$slug': {
+      id: '/$lang/blog/category/$slug'
+      path: '/blog/category/$slug'
+      fullPath: '/$lang/blog/category/$slug'
+      preLoaderRoute: typeof LangBlogCategorySlugRouteImport
+      parentRoute: typeof LangRoute
+    }
   }
 }
 
+interface AuthenticatedAdminRouteChildren {
+  AuthenticatedAdminMessagesRoute: typeof AuthenticatedAdminMessagesRoute
+  AuthenticatedAdminOrdersRoute: typeof AuthenticatedAdminOrdersRoute
+  AuthenticatedAdminRequestsRoute: typeof AuthenticatedAdminRequestsRoute
+  AuthenticatedAdminTicketsRoute: typeof AuthenticatedAdminTicketsRoute
+  AuthenticatedAdminIndexRoute: typeof AuthenticatedAdminIndexRoute
+}
+
+const AuthenticatedAdminRouteChildren: AuthenticatedAdminRouteChildren = {
+  AuthenticatedAdminMessagesRoute: AuthenticatedAdminMessagesRoute,
+  AuthenticatedAdminOrdersRoute: AuthenticatedAdminOrdersRoute,
+  AuthenticatedAdminRequestsRoute: AuthenticatedAdminRequestsRoute,
+  AuthenticatedAdminTicketsRoute: AuthenticatedAdminTicketsRoute,
+  AuthenticatedAdminIndexRoute: AuthenticatedAdminIndexRoute,
+}
+
+const AuthenticatedAdminRouteWithChildren =
+  AuthenticatedAdminRoute._addFileChildren(AuthenticatedAdminRouteChildren)
+
+interface AuthenticatedDashboardRouteChildren {
+  AuthenticatedDashboardInstallmentsRoute: typeof AuthenticatedDashboardInstallmentsRoute
+  AuthenticatedDashboardProfileRoute: typeof AuthenticatedDashboardProfileRoute
+  AuthenticatedDashboardProjectsRoute: typeof AuthenticatedDashboardProjectsRoute
+  AuthenticatedDashboardRequestsRoute: typeof AuthenticatedDashboardRequestsRoute
+  AuthenticatedDashboardTicketsRoute: typeof AuthenticatedDashboardTicketsRoute
+  AuthenticatedDashboardIndexRoute: typeof AuthenticatedDashboardIndexRoute
+}
+
+const AuthenticatedDashboardRouteChildren: AuthenticatedDashboardRouteChildren =
+  {
+    AuthenticatedDashboardInstallmentsRoute:
+      AuthenticatedDashboardInstallmentsRoute,
+    AuthenticatedDashboardProfileRoute: AuthenticatedDashboardProfileRoute,
+    AuthenticatedDashboardProjectsRoute: AuthenticatedDashboardProjectsRoute,
+    AuthenticatedDashboardRequestsRoute: AuthenticatedDashboardRequestsRoute,
+    AuthenticatedDashboardTicketsRoute: AuthenticatedDashboardTicketsRoute,
+    AuthenticatedDashboardIndexRoute: AuthenticatedDashboardIndexRoute,
+  }
+
+const AuthenticatedDashboardRouteWithChildren =
+  AuthenticatedDashboardRoute._addFileChildren(
+    AuthenticatedDashboardRouteChildren,
+  )
+
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAdminRoute: typeof AuthenticatedAdminRouteWithChildren
+  AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRouteWithChildren
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAdminRoute: AuthenticatedAdminRouteWithChildren,
+  AuthenticatedDashboardRoute: AuthenticatedDashboardRouteWithChildren,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
+interface LangRouteChildren {
+  LangAboutRoute: typeof LangAboutRoute
+  LangAuthRoute: typeof LangAuthRoute
+  LangCareersRoute: typeof LangCareersRoute
+  LangContactRoute: typeof LangContactRoute
+  LangCookiesRoute: typeof LangCookiesRoute
+  LangFaqRoute: typeof LangFaqRoute
+  LangInstallmentsRoute: typeof LangInstallmentsRoute
+  LangPricingRoute: typeof LangPricingRoute
+  LangPrivacyRoute: typeof LangPrivacyRoute
+  LangProcessRoute: typeof LangProcessRoute
+  LangRequestRoute: typeof LangRequestRoute
+  LangSearchRoute: typeof LangSearchRoute
+  LangTechnologiesRoute: typeof LangTechnologiesRoute
+  LangTermsRoute: typeof LangTermsRoute
+  LangWhyRoute: typeof LangWhyRoute
+  LangIndexRoute: typeof LangIndexRoute
+  LangBlogSlugRoute: typeof LangBlogSlugRoute
+  LangPortfolioSlugRoute: typeof LangPortfolioSlugRoute
+  LangServicesSlugRoute: typeof LangServicesSlugRoute
+  LangBlogIndexRoute: typeof LangBlogIndexRoute
+  LangPortfolioIndexRoute: typeof LangPortfolioIndexRoute
+  LangServicesIndexRoute: typeof LangServicesIndexRoute
+  LangBlogCategorySlugRoute: typeof LangBlogCategorySlugRoute
+}
+
+const LangRouteChildren: LangRouteChildren = {
+  LangAboutRoute: LangAboutRoute,
+  LangAuthRoute: LangAuthRoute,
+  LangCareersRoute: LangCareersRoute,
+  LangContactRoute: LangContactRoute,
+  LangCookiesRoute: LangCookiesRoute,
+  LangFaqRoute: LangFaqRoute,
+  LangInstallmentsRoute: LangInstallmentsRoute,
+  LangPricingRoute: LangPricingRoute,
+  LangPrivacyRoute: LangPrivacyRoute,
+  LangProcessRoute: LangProcessRoute,
+  LangRequestRoute: LangRequestRoute,
+  LangSearchRoute: LangSearchRoute,
+  LangTechnologiesRoute: LangTechnologiesRoute,
+  LangTermsRoute: LangTermsRoute,
+  LangWhyRoute: LangWhyRoute,
+  LangIndexRoute: LangIndexRoute,
+  LangBlogSlugRoute: LangBlogSlugRoute,
+  LangPortfolioSlugRoute: LangPortfolioSlugRoute,
+  LangServicesSlugRoute: LangServicesSlugRoute,
+  LangBlogIndexRoute: LangBlogIndexRoute,
+  LangPortfolioIndexRoute: LangPortfolioIndexRoute,
+  LangServicesIndexRoute: LangServicesIndexRoute,
+  LangBlogCategorySlugRoute: LangBlogCategorySlugRoute,
+}
+
+const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  LangRoute: LangRouteWithChildren,
   DesignLabRoute: DesignLabRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
